@@ -3,37 +3,44 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # This triggers the workflow when code is pushed to the 'main' branch
+      - main  # Trigger workflow on push to 'main' branch
   pull_request:
     branches:
-      - main  # This triggers the workflow when a pull request is made to the 'main' branch
+      - main  # Trigger workflow on pull request to 'main' branch
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Use the latest Ubuntu for the CI environment
+    runs-on: ubuntu-latest  # Use the latest Ubuntu runner
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2  # Check out the repository code
+      uses: actions/checkout@v3  # Use the latest version of actions/checkout
 
     - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1  # Set up Docker Buildx for building images
+      uses: docker/setup-buildx-action@v2  # Use the latest version of setup-buildx-action
 
     - name: Cache Docker layers
-      uses: actions/cache@v2  # Cache Docker layers to speed up future builds
+      uses: actions/cache@v3  # Use the latest version of actions/cache
       with:
         path: /tmp/.buildx-cache
         key: ${{ runner.os }}-buildx-${{ github.sha }}
         restore-keys: |
+          ${{ runner.os }}-buildx-${{ github.ref }}-
           ${{ runner.os }}-buildx-
 
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v2  # Docker login action
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}  # GitHub secret for Docker username
+        password: ${{ secrets.DOCKER_PASSWORD }}  # GitHub secret for Docker password
+
     - name: Build and push Docker image
-      uses: docker/build-push-action@v2  # Build and push the Docker image
+      uses: docker/build-push-action@v3  # Use the latest version of build-push-action
       with:
         context: .
-        file: ./Dockerfile  # Path to your Dockerfile
-        push: true  # Set this to true to push the image to Docker Hub
-        tags: ${{ secrets.DOCKER_USERNAME }}/ci-cd-github-actions-docker:latest  # Replace with your Docker Hub repository name
+        file: ./Dockerfile  # Path to Dockerfile
+        push: true  # Push the image to Docker Hub
+        tags: ${{ secrets.DOCKER_USERNAME }}/ci-cd-github-actions-docker:latest  # Docker Hub repository
 
     - name: Deploy to Production (Optional)
       run: |
