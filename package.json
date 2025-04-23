@@ -1,0 +1,17 @@
+{
+  "name": "ci-cd-github-actions-docker",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dockerize": "docker build -t ci-cd-app . && docker run -p 3000:3000 ci-cd-app"
+  },
+  "keywords": ["ci", "cd", "docker", "github-actions", "express"],
+  "author": "Maharshi",
+  "license": "ISC",
+  "description": "CI/CD app using GitHub Actions and Docker",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
