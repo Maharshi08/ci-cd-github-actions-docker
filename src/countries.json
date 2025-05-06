@@ -1,0 +1,48 @@
+[
+  {
+    "name": "India",
+    "code": "IN",
+    "capital": "New Delhi",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 1380004385,
+    "area": 3287263
+  },
+  {
+    "name": "United States",
+    "code": "US",
+    "capital": "Washington, D.C.",
+    "region": "Americas",
+    "subregion": "Northern America",
+    "population": 331002651,
+    "area": 9833517
+  },
+  {
+    "name": "China",
+    "code": "CN",
+    "capital": "Beijing",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 1439323776,
+    "area": 9596961
+  },
+  {
+    "name": "Japan",
+    "code": "JP",
+    "capital": "Tokyo",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 126476461,
+    "area": 377930
+  },
+  {
+    "name": "Germany",
+    "code": "DE",
+    "capital": "Berlin",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 83783942,
+    "area": 357022
+  }
+
+]

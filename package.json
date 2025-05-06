@@ -7,11 +7,18 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dockerize": "docker build -t ci-cd-app . && docker run -p 3000:3000 ci-cd-app"
   },
-  "keywords": ["ci", "cd", "docker", "github-actions", "express"],
+  "keywords": [
+    "ci",
+    "cd",
+    "docker",
+    "github-actions",
+    "express"
+  ],
   "author": "Maharshi",
   "license": "ISC",
   "description": "CI/CD app using GitHub Actions and Docker",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0"
   }
 }
