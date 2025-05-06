@@ -69,4 +69,10 @@ You can view the live website at the following link:
 [Live Website](https://maharshi08.github.io/ci-cd-github-actions-docker/)
 
 ## 🖼 Screenshot
-![Website Screenshot](https://github.com/Maharshi08/my-static-website/raw/main/screenshot.png)
+![Website Home Page Screenshot](HomeS1.png)
+![Website Countries Screenshot](countries1.png)
+![Website Countries Screenshot](countries2.png)
+![Website Countries Page Screenshot](countries4.png)
+![Website Countries Page Screenshot](countries3.png)
+![Website About Page Screenshot](about.png)
+![Website Contact Page Screenshot](contact.png)
