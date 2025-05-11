@@ -6,7 +6,7 @@ This project demonstrates a full CI/CD pipeline setup using GitHub Actions and D
 
 ## 🔗 Live Links
 
-- **Frontend Live on GitHub Pages**: [https://maharshi08.github.io/ci-cd-github-actions-docker](https://maharshi86.github.io/ci-cd-github-actions-docker)
+- **Frontend Live on GitHub Pages**: [https://maharshi08.github.io/ci-cd-github-actions-docker](https://maharshi08.github.io/ci-cd-github-actions-docker/)
 - **Docker Hub (Frontend Image)**: [https://hub.docker.com/r/maharshi86/ci-cd-github-actions-docker](https://hub.docker.com/r/maharshi86/ci-cd-github-actions-docker)
 
 ---
